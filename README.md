@@ -1,2 +1,3 @@
 # fakeddit_models
-A research-oriented project exploring fake news detection using multimodal learning on the Fakeddit dataset. Multiple deep learning architectures were evaluated by combining visual (image) and textual (headline/body) features to improve detection accuracy.
+Developed and compared multiple deep learning models for multimodal fake news detection using the Fakeddit dataset. Combined image and text representations through CLIP, CNN-LSTM, and transformer-based architectures, achieving up to 93.9% accuracy.
+
