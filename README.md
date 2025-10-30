@@ -3,7 +3,7 @@ This project develops and compares multiple deep learning models for multimodal 
 
 The work explores a range of architectures — from traditional CNN-LSTM fusion to OpenAI’s CLIP — and evaluates different fusion strategies to achieve the best possible accuracy.
 
-The best configuration achieved 93.9% accuracy, using CLIP (ViT-B/14) embeddings combined with other metadata and an XGBoost classifier.
+The best configuration achieved 93.9% accuracy, using CLIP (ViT-B/32) embeddings combined with other metadata and an XGBoost classifier.
 
 📚 Overview
 The project was developed entirely in Google Colab using .ipynb notebooks.
@@ -20,11 +20,11 @@ Notebook	Description
 
 04_DeepFusionNet_resNet_train.ipynb	Trained various fusion-based models (CNN-LSTM, MLP fusion) using pre-extracted embeddings. Compared performance metrics.
 
-05_clip.ipynb	Used CLIP ViT-B/14 for joint image–text feature extraction and evaluated multimodal representations.
+05_clip.ipynb	Used CLIP ViT-B/32 for joint image–text feature extraction and evaluated multimodal representations.
 
 06_fusion_experiments.ipynb	Explored different fusion techniques (weighted averaging, concatenation, attention-based) with various weight combinations.
 
-07_xgboost_author_features.ipynb	Added author and subreddit metadata as input features. Subreddit caused overfitting (accuracy=1.0), so final experiments used only author features + CLIP embeddings with XGBoost, resulting in 93.9% accuracy.
+07_xgboost_author_features.ipynb	Added author and subreddit metadata as input features. Subreddit caused overfitting (accuracy=1.0), so final experiments used author features + other metadata + CLIP embeddings with XGBoost, resulting in 93.9% accuracy.
 
 🧠 Key Insights
 Initial models used BERT + ResNet18, giving strong baseline results.
@@ -38,7 +38,7 @@ XGBoost performed best as a classifier on top of CLIP embeddings.
 Model / Configuration	Description	Accuracy
 BERT + ResNet18 Fusion	Early fusion of text & image embeddings	0.89
 DeepFusionNet (ResNet + Text Encoder)	Custom MLP fusion	0.91
-CLIP (ViT-B/14)	Vision-language embeddings	0.939
+CLIP (ViT-B/32)	Vision-language embeddings	0.939
 CLIP + Author + XGBoost	Final configuration	Best: 93.9%
 
 ⚙️ Technologies Used
@@ -63,9 +63,3 @@ Try fine-tuned CLIP models on Fakeddit
 Try VIT-L14 for training
 Add explainability visualizations (e.g., Grad-CAM for image saliency)
 Deploy the best-performing model via Gradio or Streamlit
-
-👨‍💻 Author
-Vishal Kumar
-Machine Learning Researcher | Deep Learning Enthusiast
-📊 Achieved 93.9% accuracy on the multimodal Fakeddit dataset
-🌐 GitHub: github.com/VishalDhariwal
