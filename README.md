@@ -12,11 +12,17 @@ Each notebook represents a key stage in the research and experimentation process
 📂 Notebooks Summary
 Notebook	Description
 01_resnet_img_processing.ipynb	Extracted image embeddings using ResNet18 for each Fakeddit post.
+
 02_roberta.ipynb	Generated text embeddings using BERT (later replaced by RoBERTa for improved context understanding).
+
 03_resnet.ipynb	Experimented with additional ResNet architectures and fine-tuning image feature extraction.
+
 04_DeepFusionNet_resNet_train.ipynb	Trained various fusion-based models (CNN-LSTM, MLP fusion) using pre-extracted embeddings. Compared performance metrics.
+
 05_clip.ipynb	Used CLIP ViT-B/14 for joint image–text feature extraction and evaluated multimodal representations.
+
 06_fusion_experiments.ipynb	Explored different fusion techniques (weighted averaging, concatenation, attention-based) with various weight combinations.
+
 07_xgboost_author_features.ipynb	Added author and subreddit metadata as input features. Subreddit caused overfitting (accuracy=1.0), so final experiments used only author features + CLIP embeddings with XGBoost, resulting in 93.9% accuracy.
 
 🧠 Key Insights
