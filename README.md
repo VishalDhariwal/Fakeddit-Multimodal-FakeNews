@@ -51,7 +51,7 @@ Pandas, NumPy, Matplotlib, tqdm
 
 🚀 How to Run
 Clone this repository:
-git clone https://github.com/VishalDhariwal/fakeddit_models.git
+git clone https://github.com/VishalDhariwal/Fakeddit-Multimodal-FakeNews.git
 cd fakeddit_models
 Install dependencies:
 pip install -r requirements.txt
@@ -68,4 +68,4 @@ Deploy the best-performing model via Gradio or Streamlit
 Vishal Kumar
 Machine Learning Researcher | Deep Learning Enthusiast
 📊 Achieved 93.9% accuracy on the multimodal Fakeddit dataset
-🌐 GitHub: github.com/<your-username>
+🌐 GitHub: github.com/VishalDhariwal
