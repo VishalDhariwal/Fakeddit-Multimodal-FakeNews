@@ -3,7 +3,7 @@ This project develops and compares multiple deep learning models for multimodal 
 
 The work explores a range of architectures — from traditional CNN-LSTM fusion to OpenAI’s CLIP — and evaluates different fusion strategies to achieve the best possible accuracy.
 
-The best configuration achieved 93.9% accuracy, using CLIP (ViT-B/14) embeddings combined with author metadata and an XGBoost classifier.
+The best configuration achieved 93.9% accuracy, using CLIP (ViT-B/14) embeddings combined with other metadata and an XGBoost classifier.
 
 📚 Overview
 The project was developed entirely in Google Colab using .ipynb notebooks.
@@ -11,6 +11,7 @@ Each notebook represents a key stage in the research and experimentation process
 
 📂 Notebooks Summary
 Notebook	Description
+
 01_resnet_img_processing.ipynb	Extracted image embeddings using ResNet18 for each Fakeddit post.
 
 02_roberta.ipynb	Generated text embeddings using BERT (later replaced by RoBERTa for improved context understanding).
@@ -50,7 +51,7 @@ Pandas, NumPy, Matplotlib, tqdm
 
 🚀 How to Run
 Clone this repository:
-git clone https://github.com/<your-username>/fakeddit_models.git
+git clone https://github.com/VishalDhariwal/fakeddit_models.git
 cd fakeddit_models
 Install dependencies:
 pip install -r requirements.txt
